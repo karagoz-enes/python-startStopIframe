@@ -39,7 +39,7 @@ def startIframe(xpath):
     global driver
     iframe_element = driver.find_element(By.XPATH, xpath)
     driver.switch_to.frame(iframe_element)
-    addLog(f"Switched to iframe {xpath}")
+    print(f"Switched to iframe {xpath}")
 
 def stopIframe():
     """
@@ -47,7 +47,7 @@ def stopIframe():
     """ 
     global driver
     driver.switch_to.default_content()
-    addLog("Switched back to default content")
+    print("Switched back to default content")
 
 pageURL = "your webpage url"
 openWebPage(pageURL)
